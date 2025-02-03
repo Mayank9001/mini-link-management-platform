@@ -1,0 +1,138 @@
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    gap: 2rem;
+    border-top: 0.2rem solid #F6F6F9;
+    border-left: 0.2rem solid #F6F6F9;
+}
+.clicks{
+    font-family: 'Manrope';
+    font-size: 1.5rem;
+    font-weight: 600;
+    height: 18vh;
+    display: flex;
+    color: #181820;
+    align-items: center;
+    line-height: 1.5rem;
+    padding-left: 2vw;
+}
+.clicks span{
+    margin-left: 3vw;
+    color: #1B48DA;
+}
+.datelabel{
+    width: 21%;
+}
+.chart{
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    margin-left: 3vw;
+    height: 3vh;
+    justify-content: space-evenly;
+    height:fit-content;
+    margin-right: 3vw;
+}
+.boxes{
+    border: 2px solid #ECECF2;
+    border-radius: 0.3rem;
+    width: 50%;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    padding-top: 1rem;
+}
+.title{
+    font-family: 'Manrope';
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: #1B48DA;
+    margin-top: 1rem;
+    margin-left: 1rem;    
+}
+.chartcontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 90%;
+    margin: 1rem 2rem 1rem 2rem;
+    font-family: 'Manrope';
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: #181820;
+}
+.chartrow {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    gap: 1rem;
+    text-align: left;
+}
+
+.devicelabel {
+    width: 20%;
+}
+.barcontainer {
+    flex-grow: 1;
+    height: 20px;
+    position: relative;
+}
+.bar {
+    height: 100%;
+    background-color: #1B48DA;
+    transition: width  0.5s ease-in-out;
+}
+.clickcount {
+    width: 40px;
+}
+@media screen and (max-width:768px) {
+    .main{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 70vh;
+        z-index: 1;
+        gap: 0;
+        border-top: 0.2rem solid #F6F6F9;
+        border-left: 0.2rem solid #F6F6F9;
+    }
+    .clicks{
+        height: 12vh;
+    }
+    .clicks span{
+        margin-left: 15vw;
+        color: #1B48DA;
+    }
+    .chart{
+        flex-direction: column;
+        margin-left: 3vw;
+        height: 60vh;
+        height:fit-content;
+    }
+    .boxes{
+        border: 2px solid #ECECF2;
+        border-radius: 0.5rem;
+        width: 100%;
+    }
+    .title{
+        font-size: 2vh;
+        margin-left: 1rem;
+    }
+    .chartcontainer {
+        height: 20vh;
+        overflow-y: auto;
+    }
+    .devicelabel {
+        width: 20%;
+    }
+    .barcontainer {
+        flex-grow: 1;
+        height: 20px;
+        position: relative;
+    }
+    .datelabel{
+        width: 27%;
+    }
+}

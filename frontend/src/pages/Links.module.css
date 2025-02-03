@@ -1,0 +1,401 @@
+.content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    gap: 2rem;
+    border-top: 0.2rem solid #F6F6F9;
+    border-left: 0.2rem solid #F6F6F9;
+}
+.tablecontainer {
+    height: fit-content;
+    width: 90%;
+    overflow: hidden;
+    padding: 20px;
+    margin: 2vh auto;
+    margin-bottom: 0;
+}
+th{
+    height: 4vh;
+}
+.linkstable {
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px #0000000A;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tablerow2{
+    height: 2vh;
+    font-family: "Manrope";
+    font-size: 14px;
+    line-height: 19.12p;
+    text-align: center;
+    align-items: center;
+    color: gray;
+}
+.tablerow td{
+    border-right: 2px solid #F8F8F8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.linkstable th, .linkstable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #F8F8F8;
+}
+.linkstable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+.actions {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    gap: 20px;
+}
+.editicon, .deleteicon {
+    color: #3B3C51;
+    cursor: pointer;
+}
+.footer{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 50%;
+    height: 10vh;
+}
+.pageButton {
+    font-family: 'Manrope';
+    border: 0.66px solid #DFE3E8;
+    padding: 5px 10px;
+    width: 35px;
+    height: 35px;
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.pageButton:hover {
+    background: #f0f0f0;
+    transition: 0.2s ease;
+}
+.pageButton:disabled{
+    cursor: not-allowed;
+    background-color: #919EAB;
+    color: #C4CDD5;
+}
+.activePage {
+    color: #4200FF;
+    border: 2px solid #4200FF;
+    font-weight: bold;
+}
+/* navbar */
+.main{
+    width: 75vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    float: right;
+}
+.searchicon{
+    width: 16px;
+    height: 16px;  
+}
+.sun{
+    margin: 0 5px 0 5px;
+    font-size: 20px;
+}
+.greet{
+    margin-right: 5rem;
+    width: 30vw;
+    height: 2.5rem;
+    display: flex;
+}
+.gm{
+    font-family: "Manrope";
+    font-weight: 700;
+    font-size: 1.5vw;
+    margin: 0;
+    line-height: 22px;
+}
+.fDate{
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+}
+.searchdiv{
+    position: relative;
+    /* left: 7rem; */
+    margin-left: 10vw;
+    display: flex;
+    gap: 1rem;
+    height: 2.5rem;
+    width: 40%;
+    flex-direction: row;
+}
+.createBtn button{
+    background-color: #1B48DA;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    width: 9rem;
+    height: 100%;
+    font-family: "Manrope";
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    border: 1px solid #1B48DA;
+    gap: 4px;
+    text-align: center;
+    padding-left: 10px;
+    /* padding: 10px 14px 10px 14px; */
+}
+.plusbtn{
+    font-size: 2rem;
+    margin-right: 5px;
+    margin-left: 0;
+    font-weight: normal;
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 70%;
+    /* gap: 8px; */
+}
+.search img{
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    left: 1rem;
+    top: 0.5rem;
+}
+.search input{
+    /* height: 3rem; */
+    border-radius: 8px;
+    border: 2px solid #ECECF2;
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 2.4rem;
+    margin-left: -1rem;
+}
+.logout{
+    margin-left: 4vw;
+    margin-right: 1vw;
+}
+.logout button{
+    background-color: #FDE48A;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    position: relative;
+    /* left: 20rem; */
+    font-family: "Manrope";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1rem;
+    text-align: center;
+    color: #923E0E;
+}
+.logoutBtn{
+    position: absolute;
+    bottom: 0.1rem;
+    border: 1px solid #ECECF2;
+    right: 2.5rem;
+    width: 7rem;
+    height: 2rem;
+    background-color: #ffffff;
+    color: #878BA9;
+    border-radius: 0.2rem;
+    font-family: 'Manrope';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 0.5rem;
+}
+.logoutBtn:hover{
+    background-color: #bbbbbb;
+    border: 1px solid #bbbbbb;
+    color: #000000;
+    transition: 0.3s ease;
+}
+@media screen and (max-width:768px){
+    .main{
+        width: 100vw;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        position: sticky;
+        align-items: normal;
+        padding-top: 2vh;
+        float: top;
+    }
+    .greet{
+        position: relative;
+        top: 0;
+        margin:0;
+        width: 40vw;
+        height: 10vh;
+        display: flex;
+    }
+    .gm{
+        font-weight: 600;
+        font-size: 2vh;
+    }
+    .fDate{
+        font-size: 1.5vh;
+        margin-top: 0;
+    }
+    .searchdiv{
+        margin-left: 2vw;
+        gap: 1vw;
+        height: 10vh;
+        width: 40vw;
+    }
+    .createBtn{
+        position: fixed;
+        bottom: 12vh;
+        right: 5vw;
+    }
+    .createBtn button{
+        border-radius: 0.5rem;
+        height: 5vh;
+        width: 25vw;
+        font-size: 2.5vw;
+    }
+    .plusbtn{
+        font-size: 5vw;
+        margin-right: 5px;
+        margin-left: 0;
+    }
+    .search{
+        width: 100%;
+        height: 50%;
+    }
+    .search img{
+        position: relative;
+        width: 5vw;
+        height: 5vw;
+        left: 1rem;
+        top: 0.8rem;
+    }
+    .search input{
+        border-radius: 0.5rem;
+        border: 2px solid #ECECF2;
+        width: 100%;
+        font-size: 1rem;
+        padding-left: 2.4rem;
+        margin-left: -1rem;
+    }
+    .logoutBtn{
+        bottom: 0.5rem;
+        right: 2.5vw;
+        width: 20vw;
+        height: 3.5vh;
+    }
+    /* content */
+    .content{
+        height: 75vh;
+    }
+    .tablecontainer{
+        overflow-x: auto;
+    }
+    .linkstable {
+        width: 100%;
+    }
+    tr th:nth-child(6){
+        padding-top: 2.5vh;
+    }
+    .tablerow2{
+        height: 2vh;
+        font-family: "Manrope";
+        font-size: 14px;
+        line-height: 19.12p;
+        text-align: center;
+        align-items: center;
+        color: gray;
+    }
+    .tablerow td{
+        border-right: 2px solid #F8F8F8;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .linkstable th, .linkstable td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 2px solid #F8F8F8;
+    }
+    .linkstable th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+    .actions {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        gap: 20px;
+    }
+    .editicon, .deleteicon {
+        color: #3B3C51;
+        cursor: pointer;
+    }
+    .footer{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+    }
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        width: 50%;
+        height: 10vh;
+    }
+    .pageButton {
+        font-family: 'Manrope';
+        border: 0.66px solid #DFE3E8;
+        padding: 5px 10px;
+        width: 35px;
+        height: 35px;
+        background: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .pageButton:hover {
+        background: #f0f0f0;
+        transition: 0.2s ease;
+    }
+    .pageButton:disabled{
+        cursor: not-allowed;
+        background-color: #919EAB;
+        color: #C4CDD5;
+    }
+    .activePage {
+        color: #4200FF;
+        border: 2px solid #4200FF;
+        font-weight: bold;
+    }
+} 

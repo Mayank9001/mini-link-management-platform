@@ -1,0 +1,273 @@
+.main{
+    display: grid;
+    inset: 0;
+    z-index: 10;
+    background: #00000080;
+    position: fixed;
+    place-items: center;
+}
+.container{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    background-color: #ffffff;
+    border-radius: 1rem 0 0 1rem;
+}
+.header{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    background-color: #3B3C51;
+    border-radius: 1rem 0 0 0;
+    color: #ffffff;
+    font-family: 'Manrope';
+    font-size: 1.1rem;
+    font-weight: 700;
+    align-items: center;
+    line-height: 1.5rem;
+}
+.title{
+    width: 85%;
+    margin: 0 0rem 0 1.5rem;
+}
+.crsicon{
+    position: relative;
+    top: 0.1rem;
+}
+.crsicon RxCross2{
+    position: relative;
+    right: 0;
+}
+.destination{
+    font-weight: 600;
+    font-family: 'Manrope';
+    font-size: 1rem;
+    line-height: 1.2rem;
+    width: 90%;
+    height: 15%;
+    margin: 0  1rem 0 1.5rem;
+}
+.destination h5{
+    margin-bottom: 0.5rem;
+}
+.destination h5 span{
+    position: relative;
+    top: -0.5rem;
+    left: 0.1rem;
+}
+.destination p, .remarks p{
+    color: #FF0101;
+    font-family: 'Manrope';
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1rem;
+    margin-top: 0;
+}
+.destination input, .remarks textarea{
+    width: 95%;
+    height: 2rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.25rem;
+    padding-left: 1rem;
+    font-family: 'Manrope';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    color: #000000;
+}
+.destination input::placeholder{
+    font-family: 'Manrope';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    color: #A0A0A0;
+}
+.remarks{
+    font-weight: 600;
+    font-family: 'Manrope';
+    font-size: 1rem;
+    line-height: 1.2rem;
+    width: 90%;
+    height: 30%;
+    margin: 0  1rem 0 1.5rem;
+}
+.remarks h5{
+    position: relative;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.remarks h5 span{
+    position: relative;
+    top: -0.4rem;
+    left: 0.1rem;
+}
+.remarks textarea{
+    width: 95%;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.25rem;
+    height: 60%;
+    position: relative;
+    bottom: 0;
+    font-family: 'Manrope';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    color: #000000;
+}
+.remarks textarea{
+    padding-top: 0.5rem;
+}
+.remarks textarea::placeholder{
+    font-family: 'Manrope';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+    color: #A0A0A0;
+}
+.footer{
+    position: relative;
+}
+.expiration{
+    font-weight: 600;
+    font-family: 'Manrope';
+    font-size: 1rem;
+    line-height: 1.2rem;
+    width: 90%;
+    height: 30%;
+    margin: 0  1rem 0 1.5rem;
+}
+.exptitle{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+}
+.exptitle h5{
+    width: 80%;
+    margin-right: 1rem;
+    margin-top: 0;
+}
+.toggle{
+    position: relative;
+    margin-left: 2.2rem;
+}
+.toggle input {
+    display: none;
+}
+
+.toggle label {
+    position: relative;
+    display: block;
+    width: 2rem;
+    height: 1rem;
+    background: #888;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 300ms linear;
+}
+
+.toggle label:before {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 300ms linear;
+}
+
+.toggle input:checked + label {
+    background-color: #1a5fff;
+}
+
+.toggle input:checked + label:before {
+    left: 1rem;
+}
+.date{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.datepicker{
+    position: relative;
+    margin-top: 0;
+    width: 95%;
+    height: 1rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.25rem;
+    padding: 0.3rem 1.5rem 0.4rem 0.5rem;
+    font-family: 'Manrope';
+    font-size: 1rem;
+    font-weight: 400;
+    color: #343446;
+    line-height: 1.5rem;
+}
+.date span{
+    position: relative;
+    right: 0.6rem;
+    top: 0.3rem;
+}
+.footer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    border-radius: 0 0 0 1rem;
+    bottom: -5%;
+    background-color: #3B3C511A;
+}
+.clear{
+    position: relative;
+    width: 3rem;
+    text-align: left;
+    left: 1rem;
+    background-color: none;
+    border: none;
+    margin-right: 60%;
+    color: #3B3C51;
+    font-family: 'Manrope';
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.createbtn{
+    background-color: #1B48DA;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 10rem;
+    height: 2rem;
+    font-family: "Manrope";
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border: 1px solid #1B48DA;
+    text-align: center;
+    margin-right: 1rem;
+}
+@media screen and (max-width:768px){
+    .main{
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        width: 80%;
+        height: 60vh;
+    }
+    .crsicon{
+        right: 2vw;
+    }
+    .clear{
+        margin-right: 50%;
+    }
+    .createbtn{
+        width: 30%;
+    }
+}
