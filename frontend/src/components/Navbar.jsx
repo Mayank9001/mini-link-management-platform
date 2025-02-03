@@ -84,7 +84,7 @@ const Navbar = () => {
             </div>
             <div className={styles.searchdiv}>
                 <div className={styles.createBtn}>
-                    <button onClick={()=>setIsModalOpen(true)}><span className={styles.plusbtn}>+</span>Create new</button>
+                    <button onClick={()=>setIsModalOpen(true)}><span className={styles.plusbtn}>+</span><p>Create new</p></button>
                 </div>
                 <div className={styles.search}>
                     <img src={Frame} alt='search icon' />

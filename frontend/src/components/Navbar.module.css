@@ -58,7 +58,6 @@
     gap: 4px;
     text-align: center;
     padding-left: 10px;
-    /* padding: 10px 14px 10px 14px; */
 }
 .plusbtn{
     font-size: 2rem;
@@ -163,22 +162,19 @@
         height: 10vh;
         width: 40vw;
     }
-    .createBtn{
-        position: fixed;
-        bottom: 12vh;
-        right: 5vw;
-    }
-    .createBtn button{
-        z-index: 500;
-        border-radius: 0.5rem;
+    .createBtn button {
+        width: 5vh;
         height: 5vh;
-        width: 25vw;
+        font-size: 2.5rem;
+        padding: 0;
+        border-radius: 0.8rem;
         font-size: 2.5vw;
+        z-index: 500;
+        display: grid;
+        place-items: center;
     }
-    .plusbtn{
-        font-size: 5vw;
-        margin-right: 5px;
-        margin-left: 0;
+    .createBtn button p {
+        display: none; 
     }
     .search{
         width: 100%;
@@ -186,10 +182,10 @@
     }
     .search img{
         position: relative;
-        width: 5vw;
-        height: 5vw;
-        left: 1rem;
-        top: 0.8rem;
+        width: 2rem;
+        height: 2rem;
+        left: 1.5rem;
+        top: 0.6rem;
     }
     .search input{
         border-radius: 0.5rem;
