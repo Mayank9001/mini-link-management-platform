@@ -40,6 +40,13 @@ const Signup = () => {
               {
                 toast.success(data.message);
                 navigate("/login");
+                setFormData({
+                  name: "",
+                  email: "",
+                  mobileNo: "",
+                  password: "",
+                  confirmPassword: "",
+                });
               }
               else if(res.status === 400){
                 toast.error(data.message);
@@ -50,13 +57,6 @@ const Signup = () => {
           } catch (error) {
               console.log(error);
           }
-          setFormData({
-            name: "",
-            email: "",
-            mobileNo: "",
-            password: "",
-            confirmPassword: "",
-          });
       };
   return (
     <>
