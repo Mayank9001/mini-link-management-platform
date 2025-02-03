@@ -113,7 +113,7 @@ router.post("/login", async (req, res) => {
       mobileNo: user.mobileNo,
     };
     const token = jwt.sign(payload, process.env.SECRET_KEY, {
-      expiresIn: "24h",
+      expiresIn: "12h",
     });
 
     const { password: hashedPass, ...userDetails } = user._doc;
