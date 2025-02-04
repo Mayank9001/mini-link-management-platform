@@ -28,13 +28,18 @@ const getUserClickAnalytics = async (userId) => {
       },
       { $sort: { _id: 1 } },
     ]);
+    dateClicks.sort((a, b) => {
+      const [dayA, monthA, yearA] = a._id.split("-").map(Number);
+      const [dayB, monthB, yearB] = b._id.split("-").map(Number);
+      return new Date(yearA, monthA - 1, dayA) - new Date(yearB, monthB - 1, dayB);
+    });
+    // console.log(dateClicks);
     let runningSum = 0;
     const preSumClicks = dateClicks.map(({ _id, clicks }) => {
       runningSum += clicks;
       return { _id, clicks: runningSum };
     });
     const dateWiseClicks = preSumClicks;
-
     // total clicks
     const totalClick = await Link.aggregate([
       { $match: { userId: new mongoose.Types.ObjectId(userId) } }, // Match the user's links
