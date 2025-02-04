@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import styles from "./CreateModal.module.css";
+import styles from "./styles/CreateModal.module.css";
 import { FaStarOfLife } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { IoCalendarOutline } from "react-icons/io5";

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./SideBar.module.css";
+import styles from "./styles/SideBar.module.css";
 import cuvette from "../assets/cuvette.png";
 
 const SideBar = ({ isDashboard, isSettings, isLinks, isAnalytics }) => {

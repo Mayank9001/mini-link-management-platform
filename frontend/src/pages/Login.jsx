@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import cuvette from "../assets/cuvette.png";
 import m_image from "../assets/m_image.png";
-import styles from "./Login.module.css";
+import styles from "./styles/Login.module.css";
 import { useNavigate } from "react-router-dom";
 import { userLogin } from "../services/user.services";
 import { toast } from "react-toastify";

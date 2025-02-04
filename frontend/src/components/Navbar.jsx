@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import styles from "./Navbar.module.css";
+import styles from "./styles/Navbar.module.css";
 import Frame from "../assets/Frame.svg";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";

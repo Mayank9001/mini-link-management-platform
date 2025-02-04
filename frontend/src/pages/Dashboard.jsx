@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import SideBar from "../components/SideBar";
 import { jwtDecode } from "jwt-decode";
 import { userDashboard } from "../services/user.services";
-import styles from "./Dashboard.module.css";
+import styles from "./styles/Dashboard.module.css";
 import Loading from "../components/Loading";
 
 const Dashboard = () => {

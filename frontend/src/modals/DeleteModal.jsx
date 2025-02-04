@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { RxCross2 } from "react-icons/rx";
-import styles from "./AccountModal.module.css";
+import styles from "./styles/AccountModal.module.css";
 import { deleteLink } from "../services/link.services";
 import { toast } from "react-toastify";
 

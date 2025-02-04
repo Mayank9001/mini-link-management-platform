@@ -7,7 +7,7 @@ import { PiCaretUpDown } from "react-icons/pi";
 import { MdEdit } from "react-icons/md";
 import { useNavigate, useLocation } from "react-router-dom";
 import { RxCopy } from "react-icons/rx";
-import styles from "./Links.module.css";
+import styles from "./styles/Links.module.css";
 import Frame from "../assets/Frame.svg";
 import CreateModal from "../modals/CreateModal";
 import EditModal from "../modals/EditModal";

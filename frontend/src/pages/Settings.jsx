@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Loading from "../components/Loading";
 import SideBar from "../components/SideBar";
-import styles from "./Settings.module.css";
+import styles from "./styles/Settings.module.css";
 import { jwtDecode } from "jwt-decode";
 import { userUpdate } from "../services/user.services";
 import AccountModal from "../modals/AccountModal";

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import SideBar from "../components/SideBar";
-import styles from "./Analytics.module.css";
+import styles from "./styles/Analytics.module.css";
 import { PiCaretUpDown } from "react-icons/pi";
 import Loading from "../components/Loading";
 import { jwtDecode } from "jwt-decode";
