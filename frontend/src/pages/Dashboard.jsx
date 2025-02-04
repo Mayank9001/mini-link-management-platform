@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from '../components/Navbar'
-import SideBar from '../components/SideBar'
-import { jwtDecode } from 'jwt-decode';
-import { userDashboard } from '../services/user.services'
-import styles from './Dashboard.module.css'
-import Loading from '../components/Loading';
+import React, { useEffect, useState } from "react";
+import Navbar from "../components/Navbar";
+import SideBar from "../components/SideBar";
+import { jwtDecode } from "jwt-decode";
+import { userDashboard } from "../services/user.services";
+import styles from "./Dashboard.module.css";
+import Loading from "../components/Loading";
 
 const Dashboard = () => {
   const [user, setUser] = useState();
@@ -13,15 +13,14 @@ const Dashboard = () => {
   const [dateWiseClicks, setDateWiseClicks] = useState([]);
   const [loading, setLoading] = useState(true);
   const isActive = {
-    dashboard :true,
-    links :false,
-    analytics : false,
-    settings : false,
+    dashboard: true,
+    links: false,
+    analytics: false,
+    settings: false,
   };
   const getuser = () => {
     const token = localStorage.getItem("token");
-    if(token)
-    {
+    if (token) {
       try {
         const data = jwtDecode(token);
         setUser(data);
@@ -30,7 +29,7 @@ const Dashboard = () => {
       }
     }
   };
-  const getdashboard = async () =>{
+  const getdashboard = async () => {
     setLoading(true);
     try {
       const res = await userDashboard();
@@ -38,43 +37,54 @@ const Dashboard = () => {
       setTotalClicls(temp.data.totalClicks);
       setDeviceTypeClicks(temp.data.deviceTypeClicks);
       setDateWiseClicks(temp.data.dateWiseClicks);
-    }catch(error){
+    } catch (error) {
       console.log(error);
     }
     setLoading(false);
   };
-  const sortedDateWiseClicks = dateWiseClicks.length > 0 ? [...dateWiseClicks].sort((a, b) => {
-    const dateA = new Date(a._id.split("-").reverse().join("-"));
-    const dateB = new Date(b._id.split("-").reverse().join("-"));
-    return dateB - dateA;
-  }) : [];
-  const sortedDeviceClicks = deviceTypeClicks.length > 0 ? [...deviceTypeClicks].sort((a, b) => { return b.clicks - a.clicks}) : [];
+  const sortedDateWiseClicks =
+    dateWiseClicks.length > 0
+      ? [...dateWiseClicks].sort((a, b) => {
+          const dateA = new Date(a._id.split("-").reverse().join("-"));
+          const dateB = new Date(b._id.split("-").reverse().join("-"));
+          return dateB - dateA;
+        })
+      : [];
+  const sortedDeviceClicks =
+    deviceTypeClicks.length > 0
+      ? [...deviceTypeClicks].sort((a, b) => {
+          return b.clicks - a.clicks;
+        })
+      : [];
 
-  useEffect(()=>{
+  useEffect(() => {
     getuser();
   }, []);
 
-  useEffect(()=>{
-    if(user)getdashboard();
-  },[user]);
+  useEffect(() => {
+    if (user) getdashboard();
+  }, [user]);
 
   return (
     <>
-      <Navbar />  
-      <SideBar isDashboard={isActive.dashboard} isSettings={isActive.settings} isLinks={isActive.links} isAnalytics={isActive.analytics} />
+      <Navbar />
+      <SideBar
+        isDashboard={isActive.dashboard}
+        isSettings={isActive.settings}
+        isLinks={isActive.links}
+        isAnalytics={isActive.analytics}
+      />
       {loading ? (
         <Loading />
       ) : (
         <div className={styles.main}>
           <div className={styles.clicks}>
             Total Clicks
-            <span>{totalClicks? totalClicks : "0"}</span>
+            <span>{totalClicks ? totalClicks : "0"}</span>
           </div>
           <div className={styles.chart}>
             <div className={styles.boxes}>
-              <span className={styles.title}>
-                Date-wise Clicks
-              </span>
+              <span className={styles.title}>Date-wise Clicks</span>
               <div className={styles.chartcontainer}>
                 {sortedDateWiseClicks.map(({ _id, clicks }) => (
                   <div key={_id} className={styles.chartrow}>
@@ -91,9 +101,7 @@ const Dashboard = () => {
               </div>
             </div>
             <div className={styles.boxes}>
-              <span className={styles.title}>
-                  Click Devices
-              </span>
+              <span className={styles.title}>Click Devices</span>
               <div className={styles.chartcontainer}>
                 {sortedDeviceClicks.map(({ _id, clicks }) => (
                   <div key={_id} className={styles.chartrow}>
@@ -113,7 +121,7 @@ const Dashboard = () => {
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
