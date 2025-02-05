@@ -63,7 +63,7 @@ app.get("/visit/:shortLink", async (req, res) => {
     const timestamp = new Date();
 
     const currentStatus =
-      timestamp < link.expirationDate ? "Active" : "Inactive";
+    timestamp < link.expirationDate || link.expirationDate === null ? "Active" : "Inactive";
     if (link.status !== currentStatus) {
       link.status = currentStatus;
       await link.save();
