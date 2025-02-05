@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import { ToastContainer, Bounce } from "react-toastify";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -26,6 +26,7 @@ function App() {
         pauseOnHover
         theme="colored"
         transition={Bounce}
+        limit={1}
       />
       <Router>
         <Routes>

@@ -12,7 +12,9 @@ import Frame from "../assets/Frame.svg";
 import CreateModal from "../modals/CreateModal";
 import EditModal from "../modals/EditModal";
 import DeleteModal from "../modals/DeleteModal";
-import { toast } from "react-toastify";
+import "./styles/linksToast.css";
+import check from "../assets/check.png";
+import { toast, Zoom } from "react-toastify";
 import Loading from "../components/Loading";
 const URL = import.meta.env.VITE_BACKEND_URL + "/visit/";
 
@@ -131,13 +133,24 @@ const Links = () => {
     navigator.clipboard
       .writeText(URL + allLinks[index].shortLink)
       .then(() => {
-        console.log(`Copied: ${allLinks[index].shortLink}`);
-        toast("Link Copied", {
-          position: "bottom-left",
-          autoClose: 2000,
-          hideProgressBar: true,
-          theme: "colored",
-        });
+        toast(
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <img
+              src={check}
+              alt="Tick"
+              style={{ width: "20px", height: "20px" }}
+            />
+            <span>Link Copied</span>
+          </div>,
+          {
+            position: "bottom-left",
+            autoClose: 2000,
+            hideProgressBar: true,
+            theme: "colored",
+            transition: Zoom,
+            className: "custom-toast",
+          }
+        );
       })
       .catch((err) => console.error("Failed to copy:", err));
   };
