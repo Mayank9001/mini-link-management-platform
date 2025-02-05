@@ -28,6 +28,7 @@
     line-height: 1.5rem;
     text-align: left;
     gap: 1rem;
+    align-items: center;
 }
 .ipt h3{
     width: 30%;
