@@ -182,10 +182,10 @@
     }
     .search img{
         position: relative;
-        width: 2rem;
-        height: 2rem;
-        left: 1.5rem;
-        top: 0.6rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        left: 1rem;
+        top: 0.8rem;
     }
     .search input{
         border-radius: 0.5rem;
