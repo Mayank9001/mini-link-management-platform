@@ -92,7 +92,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        height: 70vh;
+        height: 68vh;
         z-index: 1;
         gap: 0;
         border-top: 0.2rem solid #F6F6F9;

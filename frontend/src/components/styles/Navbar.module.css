@@ -132,7 +132,7 @@
 @media screen and (max-width:768px){
     .main{
         width: 100vw;
-        height: 10vh;
+        height: 12vh;
         display: flex;
         flex-direction: row;
         position: sticky;
