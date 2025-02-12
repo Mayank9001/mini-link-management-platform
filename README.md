@@ -70,7 +70,8 @@ npm install
 Create a `.env` file in the `frontend` folder and add:
 
 ```
-VITE_API_BASE_URL=http://localhost:5000
+VITE_API_BASE_URL=http://localhost:5000 or YOUR_BACKEND_DEPLOYED_URL
+Example: VITE_API_BASE_URL=https://xyz.onrender.com
 ```
 
 #### Start Frontend
@@ -91,11 +92,3 @@ LinkVista/
 
 - **Frontend**: Deploy on [Vercel](https://vercel.com/)
 - **Backend**: Deploy on [Render](https://render.com/)
-
-## Contributing
-
-Feel free to contribute! Fork the repo, make changes, and submit a pull request.
-
-## License
-
-MIT License
