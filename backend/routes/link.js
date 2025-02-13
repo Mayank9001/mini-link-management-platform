@@ -2,7 +2,7 @@ const express = require("express");
 const auth = require("../middleware/auth.js");
 const router = express.Router();
 const crypto = require("crypto");
-const VisitLog = require('../models/visitLogs.model')
+const VisitLog = require("../models/visitLogs.model");
 const Link = require("../models/link.model");
 
 router.post("/create", auth, async (req, res) => {
@@ -49,7 +49,7 @@ router.put("/edit/:id", auth, async (req, res) => {
   }
   const { newOriginalLink, newRemarks, newExpirationDate } = req.body;
   try {
-    if (!newOriginalLink || !newRemarks || !newExpirationDate) {
+    if (!newOriginalLink || !newRemarks) {
       return res
         .status(400)
         .json({ status: false, message: "All fields are Required!!" });
@@ -67,8 +67,8 @@ router.put("/edit/:id", auth, async (req, res) => {
         expirationDate: expirationDate,
       },
       {
-        new: true, // Return the updated document
-        runValidators: true, // Run schema validators
+        new: true,
+        runValidators: true,
       }
     );
     if (!link) {
@@ -138,7 +138,7 @@ router.delete("/delete/:id", auth, async (req, res) => {
   }
   try {
     const link = await Link.findById(id);
-    await VisitLog.deleteMany({shortLink : link.shortLink});
+    await VisitLog.deleteMany({ shortLink: link.shortLink });
     await Link.findByIdAndDelete(id);
     if (!link) {
       return res
