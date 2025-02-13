@@ -15,6 +15,7 @@ const Login = () => {
       if (token) {
         const data = jwtDecode(token);
         if (data.exp * 1000 >= Date.now()) {
+          toast.success(`Welcome Back! ${data.name}🤗`);
           navigate("/dashboard");
         }
         else{
