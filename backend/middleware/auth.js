@@ -13,7 +13,7 @@ const auth = (req, res, next) => {
     req.user = decode;
     next();
   } catch (error) {
-    res.status(500).json({ message: "Invalid token" });
+    res.status(500).json({ message: "Invalid token!! Please Login Again." });
   }
 };
 

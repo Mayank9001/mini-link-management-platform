@@ -5,12 +5,23 @@ import styles from "./styles/Login.module.css";
 import { useNavigate } from "react-router-dom";
 import { userLogin } from "../services/user.services";
 import { toast } from "react-toastify";
+import { jwtDecode } from "jwt-decode";
 
 const Login = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (localStorage.getItem("token")) {
-      navigate("/dashboard");
+      const token = localStorage.getItem("token");
+      if (token) {
+        const data = jwtDecode(token);
+        if (data.exp * 1000 >= Date.now()) {
+          navigate("/dashboard");
+        }
+        else{
+          localStorage.removeItem("token");
+          toast.error("Session Expired! Please Login Again");
+        }
+      }
     }
   }, []);
   const [formData, setFormData] = useState({
