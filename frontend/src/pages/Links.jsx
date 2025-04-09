@@ -35,7 +35,9 @@ const Links = () => {
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const searchRef = useRef(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
+  const prevEditModal = useRef(isEditModalOpen);
+  const prevDeleteModal = useRef(isDeleteModalOpen);
+  const prevModal = useRef(isModalOpen);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -98,6 +100,7 @@ const Links = () => {
 
   useEffect(() => {
     getuser();
+    getLinks();
   }, []);
   const isActive = {
     dashboard: false,
@@ -113,8 +116,17 @@ const Links = () => {
     setLoading(false);
   };
   useEffect(() => {
-    getLinks();
-  }, [isEditModalOpen, isDeleteModalOpen]);
+    if (
+      (prevEditModal.current && !isEditModalOpen) ||
+      (prevDeleteModal.current && !isDeleteModalOpen) ||
+      (prevModal.current && !isModalOpen)
+    ) {
+      getLinks();
+    }
+    prevEditModal.current = isEditModalOpen;
+    prevDeleteModal.current = isDeleteModalOpen;
+    prevModal.current = isModalOpen;
+  }, [isEditModalOpen, isDeleteModalOpen, isModalOpen]);
   const formatDate = (isoString) => {
     const date = new Date(isoString);
     return date.toLocaleString("en-GB", {
@@ -350,7 +362,6 @@ const Links = () => {
                             position: "relative",
                             display: "flex",
                             alignItems: "center",
-                            widht: "10vw",
                             paddingRight: "0",
                           }}
                         >
