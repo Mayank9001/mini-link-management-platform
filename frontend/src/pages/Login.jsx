@@ -112,7 +112,7 @@ const Login = () => {
             <div className={styles.footer}>
               <p>
                 Don't have an account ?{" "}
-                <a onClick={() => navigate("/signup")}>SignUp</a>
+                <a onClick={() => navigate("/")}>SignUp</a>
               </p>
             </div>
           </form>
