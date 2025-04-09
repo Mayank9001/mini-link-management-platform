@@ -16,9 +16,9 @@ LinkVista is a **MERN stack URL shortener and analytics platform** that allows u
 - **Backend**: Node.js, Express.js, MongoDB
 - **Hosting**: Vercel (Frontend), Render (Backend)
 
-## Screenshots
+## Demo
 
-_Add screenshots here_
+[![Watch the video](https://img.youtube.com/vi/HTMTB8nJfkA/maxresdefault.jpg)](https://youtu.be/HTMTB8nJfkA)
 
 ## Installation
 
