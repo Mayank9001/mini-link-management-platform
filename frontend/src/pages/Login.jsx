@@ -74,10 +74,10 @@ const Login = () => {
           <img src={m_image} alt="m_image" className={styles.landscape} />
         </div>
         <div className={styles.buttons}>
-          <button onClick={() => navigate("/signup")} className={styles.signup}>
+          <button onClick={() => navigate("/")} className={styles.signup}>
             SignUp
           </button>
-          <button onClick={() => navigate("/")} className={styles.login}>
+          <button disabled className={styles.login}>
             Login
           </button>
         </div>
